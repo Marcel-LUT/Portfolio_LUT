@@ -1,3 +1,4 @@
+@import "config";
 // Button
 .menu-btn {
   position: absolute;
@@ -25,7 +26,7 @@
     .btn-line {
       // Line 1 - Rotate
       &:nth-child(1) {
-        background: yellow;
+        background: $secondary-color;
         transform: rotate(45deg) translate(5px, 5px);
       }
 
@@ -37,9 +38,110 @@
 
       // Line 3 - Rotate
       &:nth-child(3) {
-        background: yellow;
+        background: $secondary-color;
         transform: rotate(-45deg) translate(7px, -6px);
       }
     }
+  }
+}
+
+// Overlay
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+  &-branding,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 5);
+    list-style: none;
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  //Pictures
+
+  &-branding {
+    background-color: $primary-color;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portrait1 {
+      width: 250px;
+      height: 250px;
+      background: url("../img/VfB Wappen.jpg");
+      margin: auto;
+      border: solid 3px yellow;
+    }
+
+    .portrait2 {
+      width: 250px;
+      height: 250px;
+      background: url("../img/Pellegrino Matarazzo.jpg");
+      margin: auto;
+      border: solid 3px yellow;
+    }
+  }
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: yellow;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 26px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Delay for the items
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
   }
 }
