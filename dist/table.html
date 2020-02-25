@@ -10,10 +10,12 @@
       integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="css/main.css" />
-    <title>Self-Study</title>
+    <title>Table</title>
   </head>
-  <body id="bg-img">
+
+  <body>
     <header>
       <div class="menu-btn">
         <div class="btn-line"></div>
@@ -28,7 +30,7 @@
           <div class="portrait2"></div>
         </div>
         <ul class="menu-nav">
-          <li class="nav-item current">
+          <li class="nav-item ">
             <a href="index.html" class="nav-link">
               Home
             </a>
@@ -38,7 +40,7 @@
               Scoresheet
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item current">
             <a href="table.html" class="nav-link">
               Table of the second league
             </a>
@@ -51,30 +53,19 @@
         </ul>
       </nav>
     </header>
-
-    <main id="home">
-      <h1 class="lg-heading">
-        VfB Stuttgart
-      </h1>
-      <h2 class="sm-heading">
-        Football Club from the south of Germany
-      </h2>
-      <div class="icons">
-        <a href="#!">
-          <i class="fab fa-twitter fa-2x"></i>
-        </a>
-        <a href="#!">
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
-        <a href="#!">
-          <i class="fab fa-instagram fa-2x"></i>
-        </a>
-        <a href="#!">
-          <i class="fab fa-google fa-2x"></i>
-        </a>
+    <main>
+      <h1 class="lg-heading">2.Bundesliga - Table</h1>
+      <div class="containeriframe">
+        <iframe
+          class="tableframe"
+          src="https://www.vfb.de/de/1893/profis/saison/2019-2020/2--bundesliga/tabelle/"
+          height="1000"
+          width="1"
+          frameborder="1"
+          style="overflow:hidden"
+        ></iframe>
       </div>
     </main>
-
     <script src="js/main.js"></script>
   </body>
 </html>
