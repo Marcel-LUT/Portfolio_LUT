@@ -101,41 +101,6 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0; }
-    ul.menu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
-  .menu-nav {
-    height: 75vh;
-    transform: translate3d(100%, 0, 0);
-    font-size: 24px; }
-  .menu-branding {
-    height: 25vh;
-    transform: translate3d(-100%, 0, 0); }
-    .menu-branding .portrait1 {
-      background: url(../img/vfbsmall.jpg);
-      width: 150px;
-      height: 150px; }
-    .menu-branding .portrait2 {
-      background: url(../img/rinosmall.jpg);
-      width: 150px;
-      height: 150px; } }
-
-@media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; } }
-
 * {
   box-sizing: border-box; }
 
@@ -198,3 +163,77 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+.scoresheetclass {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "emblem win win" "last this next";
+  grid-template-columns: repeat(3, 1fr); }
+  .scoresheetclass .vfbscoreimg {
+    grid-area: emblem;
+    margin: auto;
+    border-radius: 2%;
+    border: yellow 3px solid; }
+  .scoresheetclass .win {
+    grid-area: win;
+    font-size: 1.5rem; }
+  .scoresheetclass .opp-1 {
+    grid-area: last; }
+  .scoresheetclass .opp-2 {
+    grid-area: this; }
+  .scoresheetclass .opp-3 {
+    grid-area: next; }
+  .scoresheetclass .opp {
+    background: #515151;
+    padding: 0.5rem;
+    border-bottom: #d80505 5px solid; }
+
+.backgrdhover {
+  width: 0; }
+
+.opp-1:hover #jahnsml {
+  width: 8%; }
+
+.opp-2:hover #fuerthsml {
+  width: 8%; }
+
+.opp-3:hover #arminasml {
+  width: 8%; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-branding.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(-100%, 0, 0); }
+    .menu-branding .portrait1 {
+      background: url(../img/vfbsmall.jpg);
+      width: 150px;
+      height: 150px; }
+    .menu-branding .portrait2 {
+      background: url(../img/rinosmall.jpg);
+      width: 150px;
+      height: 150px; }
+  .scoresheetclass {
+    grid-template-areas: "emblem" "win" "last" "this" "next";
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; } }

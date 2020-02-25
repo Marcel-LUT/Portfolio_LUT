@@ -50,6 +50,17 @@
       height: 150px;
     }
   }
+
+  .scoresheetclass {
+    grid-template-areas:
+      "emblem"
+      "win"
+      "last"
+      "this"
+      "next";
+
+    grid-template-columns: 1fr;
+  }
 }
 
 // Smartphones
