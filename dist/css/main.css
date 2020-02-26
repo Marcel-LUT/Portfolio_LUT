@@ -164,6 +164,9 @@ main {
     main#home h1 {
       margin-top: 20vh; }
 
+.secondtext {
+  color: #d80505; }
+
 .scoresheetclass {
   display: grid;
   grid-gap: 30px;
@@ -217,6 +220,39 @@ main {
   border: 0;
   overflow: hidden;
   margin-top: -23%; }
+
+.position {
+  display: none; }
+
+.pics11 {
+  width: 360px;
+  border: 3px transparent solid;
+  padding: 0.3rem; }
+
+.wrapperforpics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+
+.position {
+  display: none; }
+
+.player_eleven {
+  height: 500px;
+  list-style: none;
+  text-align: center; }
+  .player_eleven:hover {
+    padding: 1rem 1rem; }
+  .player_eleven:hover .pics11 {
+    border: 3px yellow solid;
+    opacity: 0.7;
+    width: 380;
+    transition: all 0.4s ease-out; }
+  .player_eleven:hover .position {
+    display: inline;
+    transition: all 0.4s ease-out; }
 
 @media screen and (max-width: 768px) {
   main {

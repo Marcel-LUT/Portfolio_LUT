@@ -66,6 +66,9 @@ main {
     }
   }
 }
+.secondtext {
+  color: $secondary-color;
+}
 
 .scoresheetclass {
   display: grid;
@@ -143,4 +146,45 @@ main {
   overflow: hidden;
   margin-top: -23%;
 }
+
+.position {
+  display: none;
+}
+.pics11 {
+  width: 360px;
+  border: 3px transparent solid;
+  padding: 0.3rem;
+}
+
+.wrapperforpics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+.position {
+  display: none;
+}
+
+.player_eleven {
+  height: 500px;
+  list-style: none;
+  text-align: center;
+
+  &:hover {
+    padding: 1rem 1rem;
+  }
+  &:hover .pics11 {
+    border: 3px yellow solid;
+    opacity: 0.7;
+    width: 380;
+    @include easeOut;
+  }
+  &:hover .position {
+    display: inline;
+    @include easeOut;
+  }
+}
+
 @import "mobile";
