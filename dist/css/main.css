@@ -247,7 +247,7 @@ main {
     padding: 1rem 1rem; }
   .player_eleven:hover .pics11 {
     border: 3px yellow solid;
-    opacity: 0.7;
+    opacity: 0.8;
     width: 380;
     transition: all 0.4s ease-out; }
   .player_eleven:hover .position {
@@ -289,5 +289,9 @@ main {
     grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; } }
+  h1 {
+    font-size: 15vw !important; }
+  .pics11 {
+    width: 100%; }
+  .player_eleven {
+    height: 10% !important; } }
